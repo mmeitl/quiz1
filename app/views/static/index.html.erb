@@ -7,7 +7,10 @@
 </div>
 <div class = "jumbotron ">
 <div class = "container">
-        <img class = "img-responsive center-block well" src="<%= @images.urls %>">
+    <% if @images.urls.present? %>
+        
+        <%= image_tag @images.urls, :class => "img-responsive center-block well" %>
+    <% end %>
 </div>
     </div
 </div>
