@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   
   root 'static#index'
-  resources :static do
-    resources :image, :only => :create
-  end
+  resources :static
+  resources :images
+  post 'images/create'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
+  # You can have defthe root of your site routed with "root"
   # root 'welcome#index'
 
   # Example of regular route:
